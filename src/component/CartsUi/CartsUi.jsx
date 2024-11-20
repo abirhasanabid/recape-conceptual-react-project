@@ -1,15 +1,18 @@
 import PropTypes from 'prop-types';
+import SingleCardUi from '../SingleCardUi/SingleCardUi';
 
-const CartsUi = () => {
+const CartsUi = ({ cardData }) => {
     return (
         <div>
-            <h1>Cart ui</h1>
+            {
+                cardData.map(cData => <SingleCardUi key={cData.id} cData={cData}></SingleCardUi>)
+            }
         </div>
     );
 };
 
 CartsUi.propTypes = {
-    
+    cardData: PropTypes.array
 };
 
 export default CartsUi;

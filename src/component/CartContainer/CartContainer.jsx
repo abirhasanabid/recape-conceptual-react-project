@@ -3,15 +3,14 @@ import './CartContainer.css'
 import CartsUi from '../CartsUi/CartsUi';
 import AboutUi from '../AboutUi/AboutUi';
 
-const CartContainer = ({ handleToggleBtn, isActive }) => {
+const CartContainer = ({ handleToggleBtn, isActive, cardData }) => {
     return (
-        <div>
+        <div className='ml-4'>
             <h1 className="text-5xl">Cart Container</h1>
             <button onClick={() => handleToggleBtn('cart')} className={`text-2xl font-bold p-2 ${isActive.cart && 'active'}`}>Cart</button>
             <button onClick={() => handleToggleBtn('about')} className={`ml-5 text-2xl font-bold p-2 ${isActive.cart || 'active'}`}>About</button>
-
             {
-                isActive.cart ? <CartsUi></CartsUi> : <AboutUi></AboutUi>
+                isActive.cart ? <CartsUi cardData={cardData}></CartsUi> : <AboutUi></AboutUi>
             }
         </div>
     );
@@ -19,8 +18,8 @@ const CartContainer = ({ handleToggleBtn, isActive }) => {
 
 CartContainer.propTypes = {
     handleToggleBtn: PropTypes.func,
-    isActive: PropTypes.object
-
+    isActive: PropTypes.object,
+    cardData: PropTypes.array
 };
 
 export default CartContainer;

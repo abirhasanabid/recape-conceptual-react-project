@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 
-const SingleProduct = ({ product, handleBuyNowBtn }) => {
-
-    const { name, price, image, description, categories } = product;
-
+const SingleCardUi = ({ cData }) => {
+    console.log(cData);
+    const { name, price, image, description, categories } = cData;
     return (
         <div className="card card-compact bg-base-100 shadow-xl mt-6 p-2">
             <figure className=''>
@@ -16,17 +15,13 @@ const SingleProduct = ({ product, handleBuyNowBtn }) => {
                 <p className='text-xl text-gray-700'>{description}</p>
                 <p className='text-red-500 font-semibold'>{categories?.isElectronics ? 'Electronics' : 'Products'}</p>
                 <p className='text-yellow-900'>${price}</p>
-                <div className="card-actions justify-end">
-                    <button onClick={() => handleBuyNowBtn(product)} className="p-2 border bg-[#FF4E50] rounded-md text-white font-semibold">Buy Now</button>
-                </div>
             </div>
         </div>
     );
 };
 
-SingleProduct.propTypes = {
-    product: PropTypes.object,
-    handleBuyNowBtn: PropTypes.func
+SingleCardUi.propTypes = {
+    cData: PropTypes.object
 };
 
-export default SingleProduct;
+export default SingleCardUi;
