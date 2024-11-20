@@ -1,0 +1,105 @@
+{
+    "cartItems": [
+      {
+        "id": 1,
+        "name": "Wireless Headphones",
+        "price": 129.99,
+        "quantity": 1,
+        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+        "description": "High-quality wireless headphones with noise cancellation",
+        "features": {
+          "isWireless": true,
+          "hasNoiseCancellation": true,
+          "isRechargeable": true,
+          "hasMicrophone": true
+        },
+        "categories": {
+          "isElectronics": true,
+          "isAudio": true,
+          "isAccessory": true,
+          "isPortable": true
+        }
+      },
+      {
+        "id": 2,
+        "name": "Smartphone Case",
+        "price": 24.99,
+        "quantity": 2,
+        "image": "https://i.ibb.co.com/80gkQYJ/c1.jpg",
+        "description": "Durable protective case for smartphones",
+        "features": {
+          "isShockProof": true,
+          "isWaterResistant": true,
+          "hasKickstand": false,
+          "hasMagneticMount": false
+        },
+        "categories": {
+          "isAccessory": true,
+          "isProtection": true,
+          "isPhoneAccessory": true,
+          "isPortable": true
+        }
+      },
+      {
+        "id": 3,
+        "name": "USB-C Charging Cable",
+        "price": 14.99,
+        "quantity": 1,
+        "image": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0",
+        "description": "Fast charging USB-C cable with braided nylon",
+        "features": {
+          "isFastCharging": true,
+          "isBraided": true,
+          "isDataTransfer": true,
+          "isQuickConnect": true
+        },
+        "categories": {
+          "isElectronics": true,
+          "isAccessory": true,
+          "isCharging": true,
+          "isPortable": true
+        }
+      },
+      {
+        "id": 4,
+        "name": "Laptop Backpack",
+        "price": 59.99,
+        "quantity": 1,
+        "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62",
+        "description": "Spacious laptop backpack with multiple compartments",
+        "features": {
+          "isWaterproof": true,
+          "hasLaptopCompartment": true,
+          "hasUSBPort": true,
+          "hasAntiTheft": true
+        },
+        "categories": {
+          "isBag": true,
+          "isAccessory": true,
+          "isTravel": true,
+          "isPortable": true
+        }
+      },
+      {
+        "id": 5,
+        "name": "Wireless Mouse",
+        "price": 39.99,
+        "quantity": 1,
+        "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
+        "description": "Ergonomic wireless mouse with programmable buttons",
+        "features": {
+          "isWireless": true,
+          "isErgonomic": true,
+          "hasProgrammableButtons": true,
+          "hasRGBLighting": true
+        },
+        "categories": {
+          "isElectronics": true,
+          "isAccessory": true,
+          "isComputing": true,
+          "isPortable": true
+        }
+      }
+    ]
+  }
+  

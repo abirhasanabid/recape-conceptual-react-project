@@ -5,9 +5,11 @@ import CartContainer from './component/CartContainer/CartContainer'
 
 function App() {
 
+  // for toggle btn
   const [isActive, setIsActive] =
     useState({ cart: true, status: 'cart' });
 
+    // toggle btn handler
   const handleToggleBtn = (status) => {
     if (status === 'cart') {
       setIsActive({ cart: true, status: 'cart' });
