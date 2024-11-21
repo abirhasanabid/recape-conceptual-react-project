@@ -12,11 +12,24 @@ function App() {
   // for cart container
   const [cardData, setCardData] = useState([]);
 
+  // for delete btn
+  const handleDeleteBtn = id => {
+    const remainingData = cardData.filter(p => p.id !== id);
+    setCardData(remainingData);
+    // console.log(id);
+  }
+
   //  hendle bye now btn
   const handleBuyNowBtn = cardInfo => {
-    const newCardData = [...cardData, cardInfo];
-    setCardData(newCardData);
-  }
+    const isExist = cardData.find(p => p.id == cardInfo.id);
+    if (isExist) {
+      alert('alredy exist');
+    } else {
+      const newCardData = [...cardData, cardInfo];
+      setCardData(newCardData);
+    };
+
+  };
 
   // toggle btn handler
   const handleToggleBtn = (status) => {
@@ -33,7 +46,7 @@ function App() {
       <Navber cardData={cardData}></Navber>
       <div className='flex justify-between container mx-auto'>
         <AllProducts handleBuyNowBtn={handleBuyNowBtn}></AllProducts>
-        <CartContainer cardData={cardData} isActive={isActive} handleToggleBtn={handleToggleBtn}></CartContainer>
+        <CartContainer handleDeleteBtn={handleDeleteBtn} cardData={cardData} isActive={isActive} handleToggleBtn={handleToggleBtn}></CartContainer>
       </div>
     </div>
   )
